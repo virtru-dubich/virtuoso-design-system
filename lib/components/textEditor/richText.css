@@ -30,3 +30,15 @@
   position: absolute;
   color: var(--vds-color-slate-primary);
 }
+
+.editor :global(pre) {
+  white-space: pre-line;
+}
+
+.editor :global(.public-DraftStyleDefault-pre) {
+  margin: 0;
+  white-space: pre-line;
+  padding: var(--vds-spacer-sm);
+  padding-right: 0;
+  border-left: 1px solid var(--vds-color-slate-primary);
+}
