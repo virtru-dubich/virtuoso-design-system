@@ -6,9 +6,9 @@ const postcssImport = require('postcss-import');
 const modifyVars = require('../lib/styles/antd');
 
 module.exports = {
-  minimize: true,
+  // minimize: true,
   autoModules: false,
-  modules: { generateScopedName: '[hash:base64]' },
+  // modules: { generateScopedName: '[hash:base64]' },
   plugins: [
     postcssImport(),
     // postcssCustomProperties({
