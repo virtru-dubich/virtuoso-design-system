@@ -13,17 +13,13 @@ const modifyVars = require('../lib/styles/antd');
 const postcssConfig = require('./postcss.config');
 
 module.exports = {
-  input: 'lib/index.js',
+  input: ['lib/index.js', 'antd/dist/antd.less'],
   output: [
     {
-      file: 'dist//bundle.esm.js',
-      format: 'esm',
-      sourcemap: true,
-    },
-    {
-      file: 'dist//bundle.cjs.js',
+      dir: 'dist',
       format: 'cjs',
       sourcemap: true,
+      exports: 'named',
     },
   ],
   external: [
