@@ -6,28 +6,9 @@ const postcssImport = require('postcss-import');
 const modifyVars = require('../lib/styles/antd');
 
 module.exports = {
-  // minimize: true,
   autoModules: false,
-  // modules: { generateScopedName: '[hash:base64]' },
-  plugins: [
-    postcssImport(),
-    // postcssCustomProperties({
-    //   preserve: false,
-    //   importFrom: [
-    //     'lib/styles/tokens.css',
-    //     'lib/styles/common.css',
-    //     'lib/styles/build/css/design_tokens.css',
-    //   ],
-    // }),
-    // postcssHexRgba,
-    // postcssCustomMedia({
-    //   importFrom: [
-    //     'lib/styles/tokens.css',
-    //     'lib/styles/common.css',
-    //     'lib/styles/build/css/design_tokens.css',
-    //   ],
-    // }),
-  ],
+  modules: { generateScopedName: '[hash:base64]' },
+  plugins: [postcssImport()],
   extensions: ['.css', '.scss', '.less'],
   use: [
     // ['css', { javascriptEnabled: true, modifyVars }],
